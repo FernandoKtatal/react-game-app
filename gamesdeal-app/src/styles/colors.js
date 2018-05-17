@@ -1,7 +1,8 @@
 export default {
-    primary: '#81c784',
+    primary: '#90a4ae',
+    textIcons: '#FFFFFF',
     primaryTransparent: 'rgba(255, 115, 102, 0.8)',
-    secondary: '#262A34',
+    secondary: '#455a64',
     navbar: 'rgba(25, 29, 36, 0.9)',
     almostWhite: '#F9F9F9',
     white: '#FFF',
