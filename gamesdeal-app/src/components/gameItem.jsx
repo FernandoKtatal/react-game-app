@@ -30,10 +30,7 @@ const styles = {
     },
     containerCard: {
       width: '250px',
-<<<<<<< HEAD
       height:'100%',
-=======
->>>>>>> dev
     },
   };
   

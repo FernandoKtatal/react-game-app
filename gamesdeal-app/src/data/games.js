@@ -37,7 +37,6 @@ export default {
             name: 'Bioshock',
             steam: 'https://store.steampowered.com/app/7670/BioShock/',
         },
-<<<<<<< HEAD
         {
             id: 5,
             photo: batman1,
@@ -75,7 +74,5 @@ export default {
             steam: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
         },
 
-=======
->>>>>>> dev
     ],
 };
