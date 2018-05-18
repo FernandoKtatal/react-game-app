@@ -1,5 +1,4 @@
 import React from 'react';
-
 import colors from '../styles/colors';
 import games from '../data/games';
 import GameItem from './GameItem';

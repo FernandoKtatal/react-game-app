@@ -50,9 +50,9 @@ const Navbar = () => {
                 <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lojas</a>
                     <div className="dropdown-menu" aria-labelledby="navbarDropdown" style={styles.dropdown}>
-                    <a className="dropdown-item" sty href="#" style={styles.dropdown}>Nuuvem</a>
-                    <a className="dropdown-item" href="#" style={styles.dropdown}>Steam</a>
-                    <a className="dropdown-item" href="#" style={styles.dropdown}>G2a</a>
+                    <a className="dropdown-item" target="_blank" href="https://www.nuuvem.com/" style={styles.dropdown}>Nuuvem</a>
+                    <a className="dropdown-item" target="_blank" href="https://store.steampowered.com/" style={styles.dropdown}>Steam</a>
+                    <a className="dropdown-item" target="_blank" href="https://www.g2a.com/" style={styles.dropdown}>G2A</a>
                     </div>
                 </li>
                 <li className="nav-item">
