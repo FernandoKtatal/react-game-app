@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faSteam from '@fortawesome/fontawesome-free-brands/faSteamSquare';
+import faSteam from '@fortawesome/fontawesome-free-brands/faSteam';
+import g2a from '../assets/g2a.png';
 
 
 
@@ -13,12 +14,20 @@ import { logo } from '../assets/index';
 const styles = {
     imageCard: {
       width: 200,
+      borderRadius: 10,
     },
     title: {
       marginTop: 10,
-      fontSize: 18,
+      fontSize: 15,
       fontWeight: 'bold',
-      color: colors.white,
+      color: colors.text,
+    },
+    price: {
+      color: colors.text,
+      paddingRight: 10,
+      marginTop: 10,
+      fontSize: 15,
+      fontWeight: 'bold',
     },
     description: {
       color: colors.primary,
@@ -29,8 +38,14 @@ const styles = {
       paddingRight: 10,
     },
     containerCard: {
-      width: '250px',
+      width: '205px',
       height:'100%',
+    },
+    icon:{
+      color: colors.regular,
+      width: 30,
+      paddingRight: 10,
+      marginTop: 10,
     },
   };
   
@@ -40,28 +55,32 @@ const GameItem = ({ game }) => (
       justify-content-center m-5 mx-sm-0 my-sm-5 my-xl-4 mx-xl-4"
       style={styles.containerCard}
     >
-      <Image src={game.photo} style={styles.imageCard} />
+      <Image src={game.img} style={styles.imageCard} />
+      
       <h4 className="m-0 mt-2" style={styles.title}>
         {game.name}
       </h4>
+      <h2 className="m-0 mt-2" style = {styles.price}>
+          {game.price}
+      </h2>
       <div className="d-flex flex-row p-md-0" style={styles.social}>
         <FontAwesomeIcon
           className="btn_icon"
           icon={faSteam}
           style={styles.icon}
-          onClick={() => window.open(game.steam, '_blank')}
+          onClick={() => window.open(game.link, '_blank')}
         />
         <FontAwesomeIcon
           className="btn_icon"
           icon={faSteam}
           style={styles.icon}
-          onClick={() => window.open(game.steam, '_blank')}
+          onClick={() => window.open(game.link, '_blank')}
         />
         <FontAwesomeIcon
           className="btn_icon"
           icon={faSteam}
-          stßyle={styles.icon}
-          onClick={() => window.open(game.steam,'_blank')}
+          style={styles.icon}
+          onClick={() => window.open(game.link,'_blank')}
         />
       </div>
     </div>

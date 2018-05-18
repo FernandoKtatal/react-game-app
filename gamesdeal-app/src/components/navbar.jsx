@@ -5,7 +5,8 @@ import {colors} from '../styles/index';
 
 const styles = {
     logo : {
-      marginRight: 20,
+      marginRight: 30,
+      marginLeft: 200,
       width: 70,
       height: 70
     },
@@ -15,7 +16,8 @@ const styles = {
     },
   
     navbarTextContainer : {
-      flex : 1
+      flex : 1,
+      
     },
 
     search : {
@@ -29,7 +31,12 @@ const styles = {
 
     form : {
         width: 300,
-        height: 35
+        height: 35,
+        backgroundColor: colors.whiteTransparent,
+    },
+
+    formStyle:{
+        marginRight:200
     }
 
   };
@@ -60,7 +67,7 @@ const Navbar = () => {
                 </li>
                 </ul>
             </div>
-            <form className="form-inline my-2 my-lg-0">
+            <form className="form-inline my-2 my-lg-0" style={styles.formStyle}>
                 <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style={styles.form}  />
                 <button className="btn btn-outline-secondary btn-sm my-2 my-sm-0 button-image buttonSearch" type="submit" style={styles.search}>Search</button>
             </form>

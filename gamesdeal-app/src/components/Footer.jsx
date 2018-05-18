@@ -6,7 +6,7 @@ import { logo } from '../assets/index';
 
 const styles = {
   container: {
-    backgroundColor: colors.secondary,
+    backgroundColor: colors.primary,
   },
  
   info: {
