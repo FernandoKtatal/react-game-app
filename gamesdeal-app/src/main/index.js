@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import {logo} from '../assets/index';
 import {colors} from '../styles/index';
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import Game from '../components/Game'
 
 const styles = {
   logo : {
@@ -29,6 +31,8 @@ class App extends Component {
     return (
       <React.Fragment> 
         <Navbar/>
+        <Game/>
+        <Footer/>
       </React.Fragment>
     );
     

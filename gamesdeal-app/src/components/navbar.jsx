@@ -16,8 +16,22 @@ const styles = {
   
     navbarTextContainer : {
       flex : 1
+    },
+
+    search : {
+        color: colors.secondary
+    },
+
+    dropdown:{
+        color: colors.white,
+        backgroundColor: colors.secondary
+    },
+
+    form : {
+        width: 300,
+        height: 35
     }
-  
+
   };
 const Navbar = () => {
     return (
@@ -35,10 +49,10 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lojas</a>
-                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a className="dropdown-item" href="#">Nuuvem</a>
-                    <a className="dropdown-item" href="#">Steam</a>
-                    <a className="dropdown-item" href="#">G2a</a>
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdown" style={styles.dropdown}>
+                    <a className="dropdown-item" sty href="#" style={styles.dropdown}>Nuuvem</a>
+                    <a className="dropdown-item" href="#" style={styles.dropdown}>Steam</a>
+                    <a className="dropdown-item" href="#" style={styles.dropdown}>G2a</a>
                     </div>
                 </li>
                 <li className="nav-item">
@@ -47,8 +61,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <form className="form-inline my-2 my-lg-0">
-                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style={styles.form}  />
+                <button className="btn btn-outline-secondary btn-sm my-2 my-sm-0 button-image buttonSearch" type="submit" style={styles.search}>Search</button>
             </form>
             </div>
         </nav>
