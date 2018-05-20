@@ -13,6 +13,11 @@ const styles = {
     fontSize: 15,
     color: colors.white,
   },
+
+  DG:{
+    color: colors.secondary,
+  },
+
   
 };
 
@@ -24,7 +29,7 @@ const Footer = () => (
   >
     <Image src={logo} className="align-self-center pb-2" width={50} />
     <p style={styles.info}>
-      2018 - <span style={styles.zokla}>Digital Quest</span> All Rights Reserverd
+      2018 - <span style = {styles.DG} >Digital Quest</span> All Rights Reserverd
     </p>
   </div>
 );
