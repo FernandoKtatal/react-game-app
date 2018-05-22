@@ -23,7 +23,7 @@ const styles = {
          <h1 className="text-white align-self-center p-4">Catálogo</h1>
 
         <div className="container-fluid d-flex flex-wrap flex-row align-items-start justify-content-center">
-           {games.games.map(game => <GameItem key={game.id} game={game} />)}
+           {games.map(game => <GameItem key={game.id} game={game} />)}
         </div>
      
      </div>    

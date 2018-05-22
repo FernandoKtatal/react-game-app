@@ -4,8 +4,7 @@ import batman3 from '../assets/batman3.jpg';
 import euro from '../assets/euro.png';
 import bioshock from '../assets/bioshock.jpg';
 
-export default {
-    games: [
+export default [
         {
             id: 0,
             name: 'Batman Arkham Asylum',
@@ -142,5 +141,4 @@ export default {
 
     
 
-    ],
-};
+];
