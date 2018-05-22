@@ -7,10 +7,10 @@ import bioshock from '../assets/bioshock.jpg';
 export default [
         {
             id: 0,
-            name: 'Batman Arkham Asylum',
+            name: 'BioShock',
             price: 'R$ '+'60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
+            link: 'https://store.steampowered.com/app/7670/BioShock/?l=portuguese',
+            img: bioshock,
         },
         {
             id: 1,

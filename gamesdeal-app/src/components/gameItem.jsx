@@ -52,7 +52,7 @@ const styles = {
 const GameItem = ({ game }) => (
     <div
       className="d-flex flex-column align-items-center
-      justify-content-center m-5 mx-sm-0 my-sm-5 my-xl-4 mx-xl-4"
+      justify-content-center col-md-2 m-5 mx-sm-0 my-sm-5 my-xl-4 mx-xl-4"
       style={styles.containerCard}
     >
       <Image src={game.img} style={styles.imageCard} />

@@ -9,7 +9,8 @@ const styles = {
 
     img: {
         width: '100%',
-    }
+    },
+   
 }
 
 const settings = {
@@ -20,7 +21,18 @@ const settings = {
     slidesToScroll: 3,
     autoplay: true,
     autoplaySpeed: 5000,
-       
+    appendDots: dots => (
+        <div
+          style={{
+            backgroundColor: colors.primary,
+            
+          }}
+        >
+          <ul style={{ margin: "0px", padding:"0px"}}> {dots} </ul>
+        </div>
+      ),
+     
+            
   };
 
 

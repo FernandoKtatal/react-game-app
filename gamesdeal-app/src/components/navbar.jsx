@@ -3,6 +3,7 @@ import '../styles/App.css';
 import {logo} from '../assets/index';
 import {colors} from '../styles/index';
 
+
 const styles = {
     logo : {
       marginRight: 30,
@@ -12,7 +13,7 @@ const styles = {
     },
     navbar : {
       backgroundColor : colors.primary,
-      fontSize : 24
+      fontSize : 24,
     },
   
     navbarTextContainer : {
