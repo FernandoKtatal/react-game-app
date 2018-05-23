@@ -1,6 +1,6 @@
 import React from 'react';
 import colors from '../styles/colors';
-import games from '../data/games';
+// import games from '../data/games';
 import GameItem from './GameItem';
 <<<<<<< HEAD
 =======
@@ -34,7 +34,7 @@ const styles = {
   export default class Game extends React.Component{
 
     state = {
-      games2: []
+      data: []
     }
 
     componentDidMount(){
@@ -42,8 +42,8 @@ const styles = {
     }
     
     loadgames = async() =>{
-      const data = api.get(`/games`)
-      console.log(data)
+      const games = await api.get(`/games`)
+      this.setState({ data: games.data })
     }
     
   render(){
@@ -57,7 +57,7 @@ const styles = {
 
 >>>>>>> dev
         <div className="container-fluid d-flex flex-wrap flex-row align-items-start justify-content-center">
-           {games.map(game => <GameItem key={game.id} game={game} />)}
+           {this.state.data.map(game => <GameItem key={game.id} game={game} />)}
         </div>
      
 <<<<<<< HEAD
