@@ -27,6 +27,7 @@ const styles = {
     
     loadgames = async() =>{
       const data = api.get(`/games`)
+      // this.setState({games2: data})
       console.log(data)
     }
     
