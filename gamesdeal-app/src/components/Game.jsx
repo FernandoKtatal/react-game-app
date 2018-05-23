@@ -2,6 +2,7 @@ import React from 'react';
 import colors from '../styles/colors';
 import games from '../data/games';
 import GameItem from './GameItem';
+import api from '../services/api';
 
 const styles = {
     container: {
@@ -14,7 +15,23 @@ const styles = {
        
   };
 
-  const Game = () => (
+  export default class Game extends React.Component{
+
+    state = {
+      games2: []
+    }
+
+    componentDidMount(){
+      this.loadgames();
+    }
+    
+    loadgames = async() =>{
+      const data = api.get(`/games`)
+      console.log(data)
+    }
+    
+  render(){
+    return(
       <div
          id="catalogo"
          className="d-flex flex-wrap flex-column align-items-center justify-content-center p-4 p-sm-5"
@@ -26,7 +43,7 @@ const styles = {
            {games.map(game => <GameItem key={game.id} game={game} />)}
         </div>
      
-     </div>    
-  );
-
-  export default Game;
+     </div>
+    );
+  }
+}
