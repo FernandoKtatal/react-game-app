@@ -21,6 +21,7 @@ const styles = {
       fontSize: 15,
       fontWeight: 'bold',
       color: colors.text,
+     textAlign: 'center',
     },
     price: {
       color: colors.text,
@@ -61,7 +62,7 @@ const GameItem = ({ game }) => (
         {game.name}
       </h4>
       <h2 className="m-0 mt-2" style = {styles.price}>
-          {game.price}
+          R$ {game.price}
       </h2>
       <div className="d-flex flex-row p-md-0" style={styles.social}>
         <FontAwesomeIcon

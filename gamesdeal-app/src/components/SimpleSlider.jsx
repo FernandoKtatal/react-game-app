@@ -4,6 +4,7 @@ import Image from './Image';
 import { logo } from '../assets/index';
 import games from '../data/games';
 import {colors} from '../styles/index';
+import api from '../services/api';
 
 const styles = {
 
