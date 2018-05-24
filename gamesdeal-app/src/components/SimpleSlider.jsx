@@ -11,6 +11,7 @@ const styles = {
     img: {
         width: '100%',
     },
+    
    
 }
 
@@ -41,7 +42,7 @@ const settings = {
 export default class SimpleSlider extends Component {
 
     renderGame = (game, index) => (
-      <Image key={index} src={game.img}  style={styles.img} onClick={() => window.open(game.link, '_blank')}/>             
+     <Image className="image" key={index} src={game.img}  style={styles.img} onClick={() => window.open(game.link, '_blank')}/>             
     );
     renderGames = () => this.props.games.map( this.renderGame);
     

@@ -66,19 +66,19 @@ const GameItem = ({ game }) => (
       </h2>
       <div className="d-flex flex-row p-md-0" style={styles.social}>
         <FontAwesomeIcon
-          className="btn_icon"
+          className="btn_icon image"
           icon={faSteam}
           style={styles.icon}
           onClick={() => window.open(game.link, '_blank')}
         />
         <FontAwesomeIcon
-          className="btn_icon"
+          className="btn_icon image"
           icon={faSteam}
           style={styles.icon}
           onClick={() => window.open(game.link, '_blank')}
         />
         <FontAwesomeIcon
-          className="btn_icon"
+          className="btn_icon image"
           icon={faSteam}
           style={styles.icon}
           onClick={() => window.open(game.link,'_blank')}

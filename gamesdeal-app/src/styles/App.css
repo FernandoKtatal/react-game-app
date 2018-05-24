@@ -14,6 +14,11 @@
   color: white;
 }
 
+.image:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 .App-title {
   font-size: 1.5em;
 }
