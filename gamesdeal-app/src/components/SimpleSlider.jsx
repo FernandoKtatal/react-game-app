@@ -5,6 +5,7 @@ import { logo } from '../assets/index';
 import games from '../data/games';
 import {colors} from '../styles/index';
 
+
 const styles = {
 
     img: {

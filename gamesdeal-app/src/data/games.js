@@ -1,144 +1,53 @@
-import batman1 from '../assets/batman1.jpg';
-import batman2 from '../assets/batman2.jpg';
-import batman3 from '../assets/batman3.jpg';
-import euro from '../assets/euro.png';
-import bioshock from '../assets/bioshock.jpg';
+import steam from '../assets/steam.jpg';
+import nuuvem from '../assets/nuuvem.jpg';
+import g2a from '../assets/g2a.jpg';
 
 export default [
         {
             id: 0,
-            name: 'BioShock',
-            price: 'R$ '+'60,00',
-            link: 'https://store.steampowered.com/app/7670/BioShock/?l=portuguese',
-            img: bioshock,
+            img: steam,
+            link:'https://store.steampowered.com/?l=portuguese'
         },
         {
             id: 1,
-            name: 'Batman Arkham Asylum',
-            price: '20,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman2,
+            img: nuuvem,
+            link:'https://www.nuuvem.com/'
         },
         {
-            id: 2,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
+            id:2,
+            img:g2a,
+            link:'https://www.g2a.com/?adid=br-pt-txt-d-w-brand&id=15&gclid=CjwKCAjwopTYBRAzEiwAnU4kb0mmL49Stpq-4VYGBt3goLxTUtoQuzBfIbUQm2lrhCWqC0_DknUqiRoCuIgQAvD_BwE'
         },
         {
-            id: 2,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
+            id: 0,
+            img: steam,
+            link:'https://store.steampowered.com/?l=portuguese'
         },
         {
-            id: 3,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
+            id: 1,
+            img: nuuvem,
+            link:'https://www.nuuvem.com/'
         },
         {
-            id: 4,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
+            id:2,
+            img:g2a,
+            link:'https://www.g2a.com/?adid=br-pt-txt-d-w-brand&id=15&gclid=CjwKCAjwopTYBRAzEiwAnU4kb0mmL49Stpq-4VYGBt3goLxTUtoQuzBfIbUQm2lrhCWqC0_DknUqiRoCuIgQAvD_BwE'
         },
         {
-            id: 5,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
+            id: 0,
+            img: steam,
+            link:'https://store.steampowered.com/?l=portuguese'
         },
         {
-            id: 6,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
-        }, 
-        {
-            id: 7,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
-        }, 
-        {
-            id: 8,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
+            id: 1,
+            img: nuuvem,
+            link:'https://www.nuuvem.com/'
         },
         {
-            id: 9,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
+            id:2,
+            img:g2a,
+            link:'https://www.g2a.com/?adid=br-pt-txt-d-w-brand&id=15&gclid=CjwKCAjwopTYBRAzEiwAnU4kb0mmL49Stpq-4VYGBt3goLxTUtoQuzBfIbUQm2lrhCWqC0_DknUqiRoCuIgQAvD_BwE'
         },
-        {
-            id: 10,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
-        },
-        {
-            id: 11,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
-        },
-        {
-            id: 12,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
-        },
-        {
-            id: 13,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
-        },
-        {
-            id: 14,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
-        },
-        {
-            id: 15,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
-        },
-        {
-            id: 16,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
-        },
-        {
-            id: 17,
-            name: 'Batman Arkham Asylum',
-            price: '60,00',
-            link: 'https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/',
-            img: batman1,
-        },
-
-    
+       
 
 ];
