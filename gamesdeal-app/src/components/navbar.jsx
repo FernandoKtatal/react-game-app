@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/App.css';
 import {logo} from '../assets/index';
 import {colors} from '../styles/index';
+import Search from './Search';
 
 
 const styles = {
@@ -20,22 +21,15 @@ const styles = {
       flex : 1,
       
     },
-
+    /*
     search : {
         color: colors.secondary
-    },
+    },*/
 
     dropdown:{
         color: colors.white,
         backgroundColor: colors.secondary
     },
-
-    form : {
-        width: 300,
-        height: 35,
-        backgroundColor: colors.whiteTransparent,
-    },
-
     formStyle:{
         marginRight:200
     }
@@ -69,8 +63,10 @@ const Navbar = () => {
                 </ul>
             </div>
             <form className="form-inline my-2 my-lg-0" style={styles.formStyle}>
-                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style={styles.form}  />
+                <Search/>
+                {/*
                 <button className="btn btn-outline-secondary btn-sm my-2 my-sm-0 button-image buttonSearch" type="submit" style={styles.search}>Search</button>
+                */}    
             </form>
             </div>
         </nav>

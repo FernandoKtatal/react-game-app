@@ -8,6 +8,7 @@ import Game from '../components/Game';
 import SimpleSlider from '../components/SimpleSlider';
 import games from '../data/games';
 
+
 const styles = {
   logo : {
     marginRight: 20,

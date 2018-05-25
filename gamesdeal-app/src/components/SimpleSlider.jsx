@@ -49,7 +49,7 @@ export default class SimpleSlider extends Component {
     
 
     render() {
-        console.log(this.props.games);
+        
        return (
         <div>
             <Slider {...settings}>
