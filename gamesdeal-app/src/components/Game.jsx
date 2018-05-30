@@ -4,6 +4,10 @@ import colors from '../styles/colors';
 import GameItem from './GameItem';
 import api from '../services/api';
 
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as GamesActions from '../store/actions/games';
+
 const styles = {
     container: {
       backgroundColor: colors.secondary,
@@ -15,22 +19,14 @@ const styles = {
        
   };
 
-  export default class Game extends React.Component{
+  class Game extends React.Component{
 
-    state = {
-      data: []
-    }
-
-    componentDidMount(){
-      this.loadgames();
-    }
-    
-    loadgames = async() =>{
-      const games = await api.get(`/games`)
-      this.setState({ data: games.data })
-    }
-    
+  componentDidMount(){
+     this.props.addGamesResquest();
+  }
+       
   render(){
+    
     return(
       <div
          id="catalogo"
@@ -40,10 +36,19 @@ const styles = {
         <h1 className="text-white align-self-left p-4">Catálogo</h1>
 
         <div className="container-fluid d-flex flex-wrap flex-row align-items-start justify-content-center">
-           {this.state.data.map(game => <GameItem key={game.id} game={game} />)}
+           {this.props.data.map(game => <GameItem key={game.id} game={game} />)}
         </div>
      
      </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  data: state.games,
+})
+
+const mapDispatchToProps = dispatch => 
+  bindActionCreators(GamesActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Game);

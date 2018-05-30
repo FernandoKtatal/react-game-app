@@ -13,15 +13,15 @@ import { logo } from '../assets/index';
 
 const styles = {
     imageCard: {
-      width: 200,
-      borderRadius: 10,
+      width: '100%',
+      borderRadius: 5,
     },
     title: {
       marginTop: 10,
       fontSize: 15,
       fontWeight: 'bold',
       color: colors.text,
-     textAlign: 'center',
+      textAlign: 'center',
     },
     price: {
       color: colors.text,
@@ -40,7 +40,9 @@ const styles = {
     },
     containerCard: {
       width: '205px',
-      height:'100%',
+      height:'250px',
+      backgroundColor: colors.cardBackground,
+      padding: 10,
     },
     icon:{
       color: colors.regular,

@@ -4,6 +4,11 @@ import axios from 'axios'
 import api from '../services/api';
 import GameItem from './GameItem';
 
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as GamesActions from '../store/actions/games';
+
+
 
 const styles = {
     form : {
@@ -16,43 +21,25 @@ const styles = {
     },
 }
 
+
 class Search extends Component{
     state = {
-        results: [],
-        data: [],
         query: ''
     }
-
-    
-    componentDidMount(){
-        this.loadgames();
-      }
-      
-      loadgames = async() =>{
-        const games = await api.get(`/games`)
-        this.setState({ data: games.data })
-    }
-
-    getInfo = async () => {
-        const response = await api.get(`/games/?name=${this.state.query}`)
-        this.setState({results: response.data})
-        console.log(this.state.results);
-    }
-
+   
     handleInputChange = () => {
            this.setState({
                query:this.search.value
            }, () =>{ 
            if(this.state.query && this.state.query.length > 1){
-               if(this.state.query.length % 2 ===0){
-                   this.getInfo()
-               }
+               this.props.searchGamesRequest(this.state.query);
            }else if(!this.state.query){
            } 
         })
     }
 
     render(){
+       
         return (
                 <form>
                     <input className="form-control mr-sm-2" type="search" aria-label="Search" style={styles.form} 
@@ -67,4 +54,13 @@ class Search extends Component{
     }
 }
 
-export default Search
+const mapStateToProps = state => ({
+    data: state.games,
+  })
+  
+const mapDispatchToProps = dispatch => 
+    bindActionCreators(GamesActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search)
+
+

@@ -3,6 +3,7 @@ export default {
     textIcons: '#FFFFFF',
     primaryTransparent: 'rgba(255, 115, 102, 0.8)',
     secondary: '#1E3142',
+    cardBackground: '#273744',
     navbar: 'rgba(25, 29, 36, 0.9)',
     almostWhite: '#F9F9F9',
     white: '#FFF',
