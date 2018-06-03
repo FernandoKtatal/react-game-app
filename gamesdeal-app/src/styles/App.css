@@ -27,6 +27,11 @@
   font-size: large;
 }
 
+.btnViewMore:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
+
 .button-image:before {
   content: "";
   width: 16px;

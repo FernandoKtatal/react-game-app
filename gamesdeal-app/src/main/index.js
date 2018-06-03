@@ -38,7 +38,7 @@ class App extends Component {
       <Provider store={store}>
         <React.Fragment> 
           <Navbar/>
-          <SimpleSlider games={[games[0],games[1],games[2],games[3],games[4],games[5],games[6],games[7],games[8]]}/>
+          {/* <SimpleSlider games={[games[0],games[1],games[2],games[3],games[4],games[5],games[6],games[7],games[8]]}/> */}
           <Game/>
           <Footer/>
         </React.Fragment>

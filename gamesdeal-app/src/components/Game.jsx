@@ -1,12 +1,12 @@
 import React from 'react';
 import colors from '../styles/colors';
-// import games from '../data/games';
 import GameItem from './GameItem';
 import api from '../services/api';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as GamesActions from '../store/actions/games';
+import * as PageActions from '../store/actions/page';
 
 const styles = {
     container: {
@@ -15,6 +15,16 @@ const styles = {
     teamDescription: {
       fontSize: 20,
       marginBottom: 50,
+    },
+    viewMoreBtn:{
+      marginTop: 20,
+      borderWidth: 0,
+      height: 45,
+      borderRadius: 5,
+      fontSize: 14,
+      color: colors.white,
+      fontWeight: 'bold',
+      backgroundColor: colors.primary,
     },
        
   };
@@ -26,7 +36,7 @@ const styles = {
   }
        
   render(){
-    
+    console.log(this.props)
     return(
       <div
          id="catalogo"
@@ -38,7 +48,7 @@ const styles = {
         <div className="container-fluid d-flex flex-wrap flex-row align-items-start justify-content-center">
            {this.props.data.map(game => <GameItem key={game.id} game={game} />)}
         </div>
-     
+        <button className='btnViewMore' style={styles.viewMoreBtn} onClick={() => {this.props.UploadPageRequest(this.props.page[0]+1);}} > VER MAIS </button>
      </div>
     );
   }
@@ -46,9 +56,10 @@ const styles = {
 
 const mapStateToProps = state => ({
   data: state.games,
+  page: state.page,
 })
 
 const mapDispatchToProps = dispatch => 
-  bindActionCreators(GamesActions, dispatch);
+  bindActionCreators({...GamesActions, ...PageActions}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Game);

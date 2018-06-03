@@ -24,7 +24,7 @@ const styles = {
 const Footer = () => (
   <div
     id="footer"
-    className="container-fluid p-5 d-flex justify-content-center align-items-center flex-column"
+    className="container-fluid p-3 d-flex justify-content-center align-items-center flex-column"
     style={styles.container}
   >
     <Image src={logo} className="align-self-center pb-2" width={50} />

@@ -4,11 +4,11 @@ import { addGamesSuccess, searchGamesSucess } from '../actions/games';
 
 export function* addGamesRequest(action) {
     const response = yield call(api.get, `/games`);
-    yield put(addGamesSuccess(response.data));   
+    yield put(addGamesSuccess(response.data.results));
 }
 
 export function* searchGamesRequest(action){
     const response = yield call(api.get, `/games/?name=${action.payload.gameName}`); 
-    yield put(searchGamesSucess(response.data));
+    yield put(searchGamesSucess(response.data.results));
     
 }
