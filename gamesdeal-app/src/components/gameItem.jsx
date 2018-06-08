@@ -14,7 +14,7 @@ import { logo } from '../assets/index';
 const styles = {
     imageCard: {
       width: '100%',
-      borderRadius: 5,
+      borderRadius: 10,
     },
     title: {
       marginTop: 10,
@@ -40,7 +40,7 @@ const styles = {
     },
     containerCard: {
       width: '205px',
-      height:'250px',
+      height:'320px',
       backgroundColor: colors.cardBackground,
       padding: 10,
     },
@@ -61,30 +61,36 @@ const GameItem = ({ game }) => (
       <Image src={game.img} style={styles.imageCard} />
       
       <h4 className="m-0 mt-2" style={styles.title}>
-        {game.name}
+        {game.official}
       </h4>
-      <h2 className="m-0 mt-2" style = {styles.price}>
+      <div className="d-flex flex-column p-md-0" style={styles.social}>
+        <div style={styles.price}>
+          <FontAwesomeIcon
+            className="btn_icon image"
+            icon={faSteam}
+            style={styles.icon}
+            onClick={() => window.open(game.link, '_blank')}
+          />
           R$ {game.price}
-      </h2>
-      <div className="d-flex flex-row p-md-0" style={styles.social}>
-        <FontAwesomeIcon
-          className="btn_icon image"
-          icon={faSteam}
-          style={styles.icon}
-          onClick={() => window.open(game.link, '_blank')}
-        />
-        <FontAwesomeIcon
-          className="btn_icon image"
-          icon={faSteam}
-          style={styles.icon}
-          onClick={() => window.open(game.link, '_blank')}
-        />
-        <FontAwesomeIcon
-          className="btn_icon image"
-          icon={faSteam}
-          style={styles.icon}
-          onClick={() => window.open(game.link,'_blank')}
-        />
+        </div>
+        <div style={styles.price}>
+          <FontAwesomeIcon
+            className="btn_icon image"
+            icon={faSteam}
+            style={styles.icon}
+            onClick={() => window.open(game.linkSteam, '_blank')}
+          />
+          R$ {game.priceSteam}
+        </div>
+        <div style={styles.price}>
+          <FontAwesomeIcon
+            className="btn_icon image"
+            icon={faSteam}
+            style={styles.icon}
+            onClick={() => window.open(game.linkG2a,'_blank')}
+          />
+          R$ {game.priceG2a}
+        </div>
       </div>
     </div>
 );
