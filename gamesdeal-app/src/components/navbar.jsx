@@ -3,6 +3,9 @@ import '../styles/App.css';
 import {logo} from '../assets/index';
 import {colors} from '../styles/index';
 import Search from './Search';
+import { Link } from 'react-router-dom'
+
+
 
 
 const styles = {
@@ -58,7 +61,7 @@ const Navbar = () => {
                     </div>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Contato</a>
+                    <Link className="nav-link" to='/contact'>Contato</Link>
                 </li>
                 </ul>
             </div>
@@ -70,6 +73,7 @@ const Navbar = () => {
             </form>
             </div>
         </nav>
+      
     );
 }
 

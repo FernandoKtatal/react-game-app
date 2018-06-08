@@ -1,5 +1,8 @@
-export const addGamesResquest = () => ({
+export const addGamesResquest = page => ({
     type: "ADD_GAMES_REQUESTS",
+    payload: {
+        page,
+    }
 });
 
 export const addGamesSuccess = data => ({

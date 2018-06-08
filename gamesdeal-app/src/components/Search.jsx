@@ -4,6 +4,7 @@ import axios from 'axios'
 import api from '../services/api';
 import GameItem from './GameItem';
 
+
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as GamesActions from '../store/actions/games';
@@ -32,7 +33,7 @@ class Search extends Component{
                query:this.search.value
            }, () =>{ 
            if(this.state.query && this.state.query.length > 1){
-               this.props.searchGamesRequest(this.state.query);
+               this.props.searchGamesRequest(this.state.query, this.props.page);
            }else if(!this.state.query){
            } 
         })
@@ -56,6 +57,7 @@ class Search extends Component{
 
 const mapStateToProps = state => ({
     data: state.games,
+    page: state.page,
   })
   
 const mapDispatchToProps = dispatch => 

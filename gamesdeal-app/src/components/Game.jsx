@@ -32,9 +32,14 @@ const styles = {
   class Game extends React.Component{
 
   componentDidMount(){
-     this.props.addGamesResquest();
+    this.props.addGamesResquest(this.props.page);
   }
-       
+     
+  viewMore = async() => {
+    await this.props.updatePage(this.props.page[0] + 1);
+    this.props.addGamesResquest(this.props.page);
+  }
+
   render(){
     console.log(this.props)
     return(
@@ -48,7 +53,7 @@ const styles = {
         <div className="container-fluid d-flex flex-wrap flex-row align-items-start justify-content-center">
            {this.props.data.map(game => <GameItem key={game.id} game={game} />)}
         </div>
-        <button className='btnViewMore' style={styles.viewMoreBtn} onClick={() => {this.props.UploadPageRequest(this.props.page[0]+1);}} > VER MAIS </button>
+        <button className='btnViewMore' style={styles.viewMoreBtn} onClick={() => this.viewMore()} > VER MAIS </button>
      </div>
     );
   }
@@ -60,6 +65,6 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => 
-  bindActionCreators({...GamesActions, ...PageActions}, dispatch);
+  bindActionCreators({...PageActions, ...GamesActions}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Game);

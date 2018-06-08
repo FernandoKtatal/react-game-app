@@ -1,12 +1,11 @@
 const initialState = [1];
 
-export default function(state = initialState, action){
-    
+export default function page(state = initialState, action){
     switch (action.type) {
-        case "UPLOAD_PAGE_SUCCESS":
-            return [...action.payload.page];   
+        case 'UPDATE_PAGE':
+            return [action.payload.page]
         default:
             return state;
     }
-        
 }
+
