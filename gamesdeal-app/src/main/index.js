@@ -10,6 +10,7 @@ import games from '../data/games';
 import { Provider } from 'react-redux';
 import store from '../store';
 
+
  
 
 
@@ -37,7 +38,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <React.Fragment> 
-          <Navbar/>          
+          <Navbar/>        
           {/* <SimpleSlider games={[games[0],games[1],games[2],games[3],games[4],games[5],games[6],games[7],games[8]]}/> */}
           <Game/>
           <Footer/>

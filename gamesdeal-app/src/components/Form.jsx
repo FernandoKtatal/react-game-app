@@ -32,7 +32,7 @@ const styles = {
 
     background:{
         backgroundColor: colors.secondary, 
-        padding:181
+        padding:126
     }
     
   };
@@ -57,6 +57,7 @@ const Form = () => {
             <button type="submit" className="btn btn-primary" style={styles.submit}>Submit</button>
         </div>
     </form>
+    
       
     )
 }

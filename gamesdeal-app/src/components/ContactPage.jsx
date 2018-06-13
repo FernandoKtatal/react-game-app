@@ -9,6 +9,7 @@ import games from '../data/games';
 import { Provider } from 'react-redux';
 import store from '../store';
 import Form from '../components/Form';
+import Address from '../components/Address';
 
 class ContactPage extends Component{
     render(){
@@ -18,6 +19,7 @@ class ContactPage extends Component{
             <React.Fragment> 
               <Navbar/>
               <Form/>
+              <Address/>
               <Footer/>   
             </React.Fragment>
           </Provider>  
