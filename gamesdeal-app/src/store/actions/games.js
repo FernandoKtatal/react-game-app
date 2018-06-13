@@ -24,4 +24,18 @@ export const searchGamesSucess = data => ({
     payload: {
         data,
     }
+});
+
+export const priceGamesRequest = price => ({
+    type: "PRICE_GAMES_REQUESTS",
+    payload:{
+        price,
+    }
+})
+
+export const priceGamesSucess = data => ({
+    type: "PRICE_GAMES_SUCCESS",
+    payload: {
+        data,
+    }
 })
